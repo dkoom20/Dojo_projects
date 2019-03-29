@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Leonardo</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_stylesheet.css') }}">
+<!--        <link rel="stylesheet" type="text/css" href="ninjacat.css">
+            <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+            <script src="ninjacat.js"></script>
+-->
+    </head>
+    <body>
+        <h2>A Ninja</h2>
+        {% if color == "blue" %}
+        <img src="/static/images/leonardo.jpg" alt="Leonardo">
+        {% elif color == "red" %}
+        <img src="/static/images/raphael.jpg" alt="Raphael">
+        {% elif color == "orange" %}
+        <img src="/static/images/michelangelo.jpg" alt="Michelangelo">
+        {% elif color == "purple" %}
+        <img src="/static/images/donatello.jpg" alt="Donatello">
+        {% else %}
+        <img src="/static/images/notapril.jpg" alt="not April">
+        {% endif %}
+     
+    </body>
+</html>      

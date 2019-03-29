@@ -1,0 +1,59 @@
+  
+    <div class="inline-blk">
+        <span>Fullness: @ViewBag.Dojodachi.Fullness</span>
+    </div>
+    <div class="inline-blk">
+        <span>Happiness: @ViewBag.Dojodachi.Happiness</span>
+    </div>
+    <div class="inline-blk">
+        <span>Meals: @ViewBag.Dojodachi.Meals</span>
+    </div>
+    <div class="inline-blk">
+        <span>Energy: @ViewBag.Dojodachi.Energy</span>
+    </div>
+    <div class="boxed-display">
+
+        <span class="center">@ViewBag.Reaction</span>
+        <span>@ViewBag.Message</span>
+
+    </div>
+
+    <p>  </p>
+    <p>  </p>
+
+
+    @{
+    if(ViewBag.GameStatus == "running")
+        {
+        <div class="inline-blk">
+            <form action="/performAction" method="post">
+                <input type="hidden" value="feed" name="action">
+                <button type="submit">Feed</button>
+            </form>
+        </div>
+        <div class="inline-blk">
+            <form action="/performAction" method="post">
+                <input type="hidden" value="play" name="action">
+                <button type="submit">Play</button>
+            </form>
+        </div>
+        <div class="inline-blk">
+            <form action="/performAction" method="post">
+                <input type="hidden" value="work" name="action">
+                <button type="submit">Work</button>
+            </form>
+        </div>
+        <div class="inline-blk">
+            <form action="/performAction" method="post">
+                <input type="hidden" value="sleep" name="action">
+                <button type="submit">Sleep</button>
+            </form>
+        </div>
+        }
+    else if(ViewBag.GameStatus == "over")
+        {
+        <div class="center-btn">
+            <a href="/reset" method="post"><button>Reset?</button></a>
+        </div>
+        }
+    }

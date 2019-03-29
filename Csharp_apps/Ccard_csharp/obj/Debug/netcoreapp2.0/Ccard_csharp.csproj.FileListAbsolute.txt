@@ -1,0 +1,10 @@
+C:\Users\Preferred User\csharp_dojo\Ccard_csharp\bin\Debug\netcoreapp2.0\Ccard_csharp.deps.json
+C:\Users\Preferred User\csharp_dojo\Ccard_csharp\bin\Debug\netcoreapp2.0\Ccard_csharp.runtimeconfig.json
+C:\Users\Preferred User\csharp_dojo\Ccard_csharp\bin\Debug\netcoreapp2.0\Ccard_csharp.runtimeconfig.dev.json
+C:\Users\Preferred User\csharp_dojo\Ccard_csharp\bin\Debug\netcoreapp2.0\Ccard_csharp.dll
+C:\Users\Preferred User\csharp_dojo\Ccard_csharp\bin\Debug\netcoreapp2.0\Ccard_csharp.pdb
+C:\Users\Preferred User\csharp_dojo\Ccard_csharp\obj\Debug\netcoreapp2.0\Ccard_csharp.csproj.CoreCompileInputs.cache
+C:\Users\Preferred User\csharp_dojo\Ccard_csharp\obj\Debug\netcoreapp2.0\Ccard_csharp.AssemblyInfoInputs.cache
+C:\Users\Preferred User\csharp_dojo\Ccard_csharp\obj\Debug\netcoreapp2.0\Ccard_csharp.AssemblyInfo.cs
+C:\Users\Preferred User\csharp_dojo\Ccard_csharp\obj\Debug\netcoreapp2.0\Ccard_csharp.dll
+C:\Users\Preferred User\csharp_dojo\Ccard_csharp\obj\Debug\netcoreapp2.0\Ccard_csharp.pdb

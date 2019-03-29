@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Submitted Info</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_stylesheet.css') }}">
+    </head>
+    <body>
+
+        <h2>Submitted Info</h2>
+
+        <h4>Name: {{ name }} </h4>
+        <h4>Dojo Location: {{ location }} </h4>
+        <h4>Favorite Language: {{ language }} </h4>
+        <h4>Comment: {{ comment }} </h4>
+
+        <form action='/'>
+             <input type='submit' value='Go Back' action='/'>
+        </form>
+    </body>
+</html>

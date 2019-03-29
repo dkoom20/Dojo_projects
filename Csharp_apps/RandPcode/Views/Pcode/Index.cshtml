@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Random Passcode Generator</title>
+        <link rel="stylesheet" href="~/css/Pcodestyle.css"/>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h2 class="h2">Random passcode (passcode #@ViewBag.genCount)</h2>
+            <div class="pcode_box">
+                <p class="pcode_box">@ViewBag.PassCode</p>
+            </div>
+            <div class="pcode_box">
+                <a href="/"><button>Generate</button></a>
+            </div>
+        </div>
+    </body>
+</html>

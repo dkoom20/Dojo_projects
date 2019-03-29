@@ -1,0 +1,10 @@
+C:\Users\Preferred User\csharp_dojo\QtDojo\bin\Debug\netcoreapp2.0\QtDojo.deps.json
+C:\Users\Preferred User\csharp_dojo\QtDojo\bin\Debug\netcoreapp2.0\QtDojo.runtimeconfig.json
+C:\Users\Preferred User\csharp_dojo\QtDojo\bin\Debug\netcoreapp2.0\QtDojo.runtimeconfig.dev.json
+C:\Users\Preferred User\csharp_dojo\QtDojo\bin\Debug\netcoreapp2.0\QtDojo.dll
+C:\Users\Preferred User\csharp_dojo\QtDojo\bin\Debug\netcoreapp2.0\QtDojo.pdb
+C:\Users\Preferred User\csharp_dojo\QtDojo\obj\Debug\netcoreapp2.0\QtDojo.csproj.CoreCompileInputs.cache
+C:\Users\Preferred User\csharp_dojo\QtDojo\obj\Debug\netcoreapp2.0\QtDojo.AssemblyInfoInputs.cache
+C:\Users\Preferred User\csharp_dojo\QtDojo\obj\Debug\netcoreapp2.0\QtDojo.AssemblyInfo.cs
+C:\Users\Preferred User\csharp_dojo\QtDojo\obj\Debug\netcoreapp2.0\QtDojo.dll
+C:\Users\Preferred User\csharp_dojo\QtDojo\obj\Debug\netcoreapp2.0\QtDojo.pdb

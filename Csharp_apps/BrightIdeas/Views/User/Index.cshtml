@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "BrightIdeas - Login / Register";
+}
+
+@{
+    if (TempData["Error"] != null)
+    {
+        <p>@TempData["Error"]</p>
+    }
+}
+
+@Html.Partial("./Partials/Login")
+@Html.Partial("./Partials/Register")

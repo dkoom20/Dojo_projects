@@ -1,0 +1,18 @@
+.boxed-display{
+    margin-top: 99px;
+    margin-bottom: 99px;
+    border: .1em solid black;
+    height: 300px;
+    width: 600px;
+    margin-left: 211px;
+    text-align: center;
+}
+
+.inline-blk{
+    display: inline-block;
+    width: 22%;
+    text-align: center;
+}
+.center-btn{
+    text-align: center;
+}

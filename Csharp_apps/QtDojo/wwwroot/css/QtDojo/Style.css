@@ -1,0 +1,11 @@
+.wrapper {
+    width: 880px;
+    height:980px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 5px;
+}
+.inline-blk {
+    display: inline-block;
+}

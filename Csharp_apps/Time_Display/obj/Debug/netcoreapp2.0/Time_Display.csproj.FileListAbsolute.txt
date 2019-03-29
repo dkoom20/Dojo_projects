@@ -1,0 +1,10 @@
+C:\Users\Preferred User\csharp_dojo\Time_Display\bin\Debug\netcoreapp2.0\Time_Display.deps.json
+C:\Users\Preferred User\csharp_dojo\Time_Display\bin\Debug\netcoreapp2.0\Time_Display.runtimeconfig.json
+C:\Users\Preferred User\csharp_dojo\Time_Display\bin\Debug\netcoreapp2.0\Time_Display.runtimeconfig.dev.json
+C:\Users\Preferred User\csharp_dojo\Time_Display\bin\Debug\netcoreapp2.0\Time_Display.dll
+C:\Users\Preferred User\csharp_dojo\Time_Display\bin\Debug\netcoreapp2.0\Time_Display.pdb
+C:\Users\Preferred User\csharp_dojo\Time_Display\obj\Debug\netcoreapp2.0\Time_Display.csproj.CoreCompileInputs.cache
+C:\Users\Preferred User\csharp_dojo\Time_Display\obj\Debug\netcoreapp2.0\Time_Display.AssemblyInfoInputs.cache
+C:\Users\Preferred User\csharp_dojo\Time_Display\obj\Debug\netcoreapp2.0\Time_Display.AssemblyInfo.cs
+C:\Users\Preferred User\csharp_dojo\Time_Display\obj\Debug\netcoreapp2.0\Time_Display.dll
+C:\Users\Preferred User\csharp_dojo\Time_Display\obj\Debug\netcoreapp2.0\Time_Display.pdb

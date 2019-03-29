@@ -1,0 +1,39 @@
+@model NewAuctionViewModel
+
+@{
+    if (TempData["Error"] != null)
+    {
+        <p>@TempData["Error"]</p>
+    }
+}
+
+
+<h1>New Auction ..................................................................
+    <a href="/GetAuctions" class="button button-primary">Home</a>
+    <a href="/Logout" class="button button-primary">| Logout</a>
+</h1>
+
+<form asp-action="CreateAuction" asp-controller="RunAuctions" method="post">
+
+    <div class="form-group">
+        <span asp-validation-for="product"></span>
+        <label asp-for="product">Product</label>
+        <input class="form-control" asp-for="product">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="description"></span>
+        <label asp-for="description">Description</label>
+        <input class="form-control" asp-for="description">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="ending_at"></span>
+        <label asp-for="ending_at">Ending Date</label>
+        <input class="form-control" asp-for="ending_at">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="opening_bid"></span>
+        <label asp-for="opening_bid">Starting Bid</label>
+        <input class="form-control" asp-for="opening_bid">
+    </div>
+    <input type="submit" value="Submit">
+</form>

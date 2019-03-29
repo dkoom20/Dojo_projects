@@ -1,0 +1,42 @@
+.wrapper {
+    width: 880px;
+    height:980px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 5px;
+}
+.projleft {
+    display: inline-block;
+    background-color: rgb(247, 245, 237);
+    color: rgb(207, 141, 141);
+    border: 3px;
+    margin-left: 10px;
+    height: 320;
+    width:  420px;
+}
+.projright {
+    display: inline-block;
+    background-color: aquamarine;
+    color: rgb(63, 99, 139);
+    margin-left: 30px;
+    height: 320;
+    width: 420px;    
+}
+#logout {
+    position: absolute;
+    left: 930px;
+    top: 10px;
+    margin: 5px;
+}
+#txtbox {
+    height:100px;
+    width:400px;
+}   
+h3 {
+    padding: 5px;
+}
+h4 {
+    padding: 5px;
+    color: green
+}

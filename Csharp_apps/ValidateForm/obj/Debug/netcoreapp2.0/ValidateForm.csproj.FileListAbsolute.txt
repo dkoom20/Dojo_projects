@@ -1,0 +1,10 @@
+C:\Users\Preferred User\csharp_dojo\ValidateForm\bin\Debug\netcoreapp2.0\ValidateForm.deps.json
+C:\Users\Preferred User\csharp_dojo\ValidateForm\bin\Debug\netcoreapp2.0\ValidateForm.runtimeconfig.json
+C:\Users\Preferred User\csharp_dojo\ValidateForm\bin\Debug\netcoreapp2.0\ValidateForm.runtimeconfig.dev.json
+C:\Users\Preferred User\csharp_dojo\ValidateForm\bin\Debug\netcoreapp2.0\ValidateForm.dll
+C:\Users\Preferred User\csharp_dojo\ValidateForm\bin\Debug\netcoreapp2.0\ValidateForm.pdb
+C:\Users\Preferred User\csharp_dojo\ValidateForm\obj\Debug\netcoreapp2.0\ValidateForm.csproj.CoreCompileInputs.cache
+C:\Users\Preferred User\csharp_dojo\ValidateForm\obj\Debug\netcoreapp2.0\ValidateForm.AssemblyInfoInputs.cache
+C:\Users\Preferred User\csharp_dojo\ValidateForm\obj\Debug\netcoreapp2.0\ValidateForm.AssemblyInfo.cs
+C:\Users\Preferred User\csharp_dojo\ValidateForm\obj\Debug\netcoreapp2.0\ValidateForm.dll
+C:\Users\Preferred User\csharp_dojo\ValidateForm\obj\Debug\netcoreapp2.0\ValidateForm.pdb

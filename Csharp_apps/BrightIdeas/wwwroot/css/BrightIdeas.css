@@ -1,0 +1,20 @@
+body {
+    padding-top: 8px;
+    padding-right: 20px;
+}
+
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.form-group {
+    width: 850px;
+    height: 44px;
+    display: inline-block;
+}
+
+.form-group-button {
+    display: inline-block;
+}

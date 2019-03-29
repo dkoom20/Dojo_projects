@@ -1,0 +1,10 @@
+C:\Users\Preferred User\csharp_dojo\Pokeinfo\bin\Debug\netcoreapp2.0\Pokeinfo.deps.json
+C:\Users\Preferred User\csharp_dojo\Pokeinfo\bin\Debug\netcoreapp2.0\Pokeinfo.runtimeconfig.json
+C:\Users\Preferred User\csharp_dojo\Pokeinfo\bin\Debug\netcoreapp2.0\Pokeinfo.runtimeconfig.dev.json
+C:\Users\Preferred User\csharp_dojo\Pokeinfo\bin\Debug\netcoreapp2.0\Pokeinfo.dll
+C:\Users\Preferred User\csharp_dojo\Pokeinfo\bin\Debug\netcoreapp2.0\Pokeinfo.pdb
+C:\Users\Preferred User\csharp_dojo\Pokeinfo\obj\Debug\netcoreapp2.0\Pokeinfo.csproj.CoreCompileInputs.cache
+C:\Users\Preferred User\csharp_dojo\Pokeinfo\obj\Debug\netcoreapp2.0\Pokeinfo.AssemblyInfoInputs.cache
+C:\Users\Preferred User\csharp_dojo\Pokeinfo\obj\Debug\netcoreapp2.0\Pokeinfo.AssemblyInfo.cs
+C:\Users\Preferred User\csharp_dojo\Pokeinfo\obj\Debug\netcoreapp2.0\Pokeinfo.dll
+C:\Users\Preferred User\csharp_dojo\Pokeinfo\obj\Debug\netcoreapp2.0\Pokeinfo.pdb

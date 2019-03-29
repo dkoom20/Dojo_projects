@@ -1,0 +1,10 @@
+C:\Users\Preferred User\csharp_dojo\LognReg\bin\Debug\netcoreapp2.0\LognReg.deps.json
+C:\Users\Preferred User\csharp_dojo\LognReg\bin\Debug\netcoreapp2.0\LognReg.runtimeconfig.json
+C:\Users\Preferred User\csharp_dojo\LognReg\bin\Debug\netcoreapp2.0\LognReg.runtimeconfig.dev.json
+C:\Users\Preferred User\csharp_dojo\LognReg\bin\Debug\netcoreapp2.0\LognReg.dll
+C:\Users\Preferred User\csharp_dojo\LognReg\bin\Debug\netcoreapp2.0\LognReg.pdb
+C:\Users\Preferred User\csharp_dojo\LognReg\obj\Debug\netcoreapp2.0\LognReg.csproj.CoreCompileInputs.cache
+C:\Users\Preferred User\csharp_dojo\LognReg\obj\Debug\netcoreapp2.0\LognReg.AssemblyInfoInputs.cache
+C:\Users\Preferred User\csharp_dojo\LognReg\obj\Debug\netcoreapp2.0\LognReg.AssemblyInfo.cs
+C:\Users\Preferred User\csharp_dojo\LognReg\obj\Debug\netcoreapp2.0\LognReg.dll
+C:\Users\Preferred User\csharp_dojo\LognReg\obj\Debug\netcoreapp2.0\LognReg.pdb

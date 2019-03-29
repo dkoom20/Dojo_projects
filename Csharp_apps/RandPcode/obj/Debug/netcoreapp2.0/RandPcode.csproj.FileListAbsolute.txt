@@ -1,0 +1,10 @@
+C:\Users\Preferred User\csharp_dojo\RandPcode\bin\Debug\netcoreapp2.0\RandPcode.deps.json
+C:\Users\Preferred User\csharp_dojo\RandPcode\bin\Debug\netcoreapp2.0\RandPcode.runtimeconfig.json
+C:\Users\Preferred User\csharp_dojo\RandPcode\bin\Debug\netcoreapp2.0\RandPcode.runtimeconfig.dev.json
+C:\Users\Preferred User\csharp_dojo\RandPcode\bin\Debug\netcoreapp2.0\RandPcode.dll
+C:\Users\Preferred User\csharp_dojo\RandPcode\bin\Debug\netcoreapp2.0\RandPcode.pdb
+C:\Users\Preferred User\csharp_dojo\RandPcode\obj\Debug\netcoreapp2.0\RandPcode.csproj.CoreCompileInputs.cache
+C:\Users\Preferred User\csharp_dojo\RandPcode\obj\Debug\netcoreapp2.0\RandPcode.AssemblyInfoInputs.cache
+C:\Users\Preferred User\csharp_dojo\RandPcode\obj\Debug\netcoreapp2.0\RandPcode.AssemblyInfo.cs
+C:\Users\Preferred User\csharp_dojo\RandPcode\obj\Debug\netcoreapp2.0\RandPcode.dll
+C:\Users\Preferred User\csharp_dojo\RandPcode\obj\Debug\netcoreapp2.0\RandPcode.pdb

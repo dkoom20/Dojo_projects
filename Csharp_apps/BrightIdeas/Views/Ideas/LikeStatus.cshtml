@@ -1,0 +1,23 @@
+@model LikeStatusViewModel
+@{
+    if (TempData["Error"] != null)
+    {
+        <p>@TempData["Error"]</p>
+    }
+}
+
+<h5>  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+      . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  <a href="/IdeasDashboard" class="button button-primary">Bright Ideas |</a> <a href="/Logout" class="button button-primary">Logout</a> </h5>
+
+<h4> </h4>
+<h4> @Model.Selected_user.alias says: . . . . @Model.Selected_idea.text </h4>
+<h3> </h3>
+<h4> People who liked this post: </h4>
+<h3> </h3>
+<h5>Alias - - - - - - - Name - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - - - -</h5>
+<h5>================================================================</h5>
+@foreach (var L in Model.allLikers)
+{
+    <h5> @L.Liker.alias  - - - - - @L.Liker.name </h5>
+}

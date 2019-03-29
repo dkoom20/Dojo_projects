@@ -1,0 +1,41 @@
+@model IdeasDashboardViewModel
+@{
+    if (TempData["Error"] != null)
+    {
+        <p>@TempData["Error"]</p>
+    }
+}
+
+<h4> Hello @Model.Current_user.alias !  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <a href="/Logout" class="button button-primary">Logout</a> </h4>
+<h2> </h2>
+
+<form asp-action="NewIdea" asp-controller="Ideas" method="post">
+
+    <div class="form-group">
+
+          <span asp-validation-for="text"></span>
+          <input class="form-control" asp-for="text" placeholder="Post something witty here ......">
+
+    </div>
+    <div class="form-group-button">
+        <input type="submit" value="Idea!">   
+    </div>
+</form>
+
+@{ int idx = 0; }
+@foreach (var idea in Model.CurrentIdeas)
+{
+
+    if(idea.userid == Model.Current_user.id)
+    {
+        <p><a href="/UserProfile/@idea.userid" class="button button-primary"> @idea.IdeaGuy.alias</a> says:  .  .  .   @idea.text   <a href="/DeleteIdea/@idea.id"  class="button button-primary">  DELETE</a></p>
+    }
+    else 
+    {
+        <p><a href="/UserProfile/@idea.userid" class="button button-primary"> @idea.IdeaGuy.alias</a> says:  .  .  .   @idea.text  </p>
+    }
+
+    <p>.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  <a href="/AddLike/@idea.id" class="button button-primary"> LIKE </a> .  .  .  .  .  .  .  .  .  .  .  .  .  <a href="/LikeStatus/@idea.id"  class="button button-primary"> @Model.LikesList[idx] people</a> Like This </p>
+    { idx++; }
+}

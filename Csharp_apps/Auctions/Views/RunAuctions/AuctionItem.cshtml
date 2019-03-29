@@ -1,0 +1,37 @@
+@model AuctionItemViewModel
+@{
+    if (TempData["Error"] != null)
+    {
+        <p>@TempData["Error"]</p>
+    }
+}
+
+<h2>@Model.Current_auction.product - - - - - - - - - - - - - - - - - - Created by @Model.Current_creator.first_name   </h2>
+<h3> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    <a href="/GetAuctions" class="button button-primary">Home </a>
+    <a href="/Logout" class="button button-primary"> | Logout</a>
+</h3>
+
+<h4>"Time Remaining " @Model.Current_auction.RemainTime </h4>
+
+<div class = "item_desc">
+    <p>*</p>
+    <h5>@Model.Current_auction.description</h5>
+    <p>*</p>
+
+</div>
+
+<h4> Current High bid  _________________________  BY: @Model.Current_high_bidder.first_name </h4>
+<h4> @Model.Current_bid.amount </h4>
+
+
+<form asp-action="BidItem" asp-controller="RunAuctions" method="post">
+
+    <div class="form-group">
+        <span asp-validation-for="amount"></span>
+        <label asp-for="amount">Your Bid Goes Here</label>
+        <input class="form-control" asp-for="amount">
+    </div>
+    
+    <input type="submit" value="BID !!">
+</form>

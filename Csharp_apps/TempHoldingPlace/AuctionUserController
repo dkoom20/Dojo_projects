@@ -1,0 +1,253 @@
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Auctions.Models;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+
+
+namespace Auctions.Controllers
+{
+    public class UserController : Controller
+    {
+        private AuctionsContext _context;
+
+        public UserController(AuctionsContext context)
+        {   
+            _context = context;
+        }   
+
+
+        public User Logged_user
+        {
+        get {return _context.users.SingleOrDefault
+            (u => u.id == (int)HttpContext.Session.GetInt32("id"));
+            }
+        }
+
+
+        [HttpGet]
+        [Route("")]
+        public IActionResult Index()
+        {
+            return View("Register");
+        }
+
+
+        [HttpGet]
+        [Route("Login")]
+        public IActionResult Login()
+        {
+            return View("Login");
+        }
+
+
+        [HttpPost]
+        [Route("Register")]
+        public IActionResult Register(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                PasswordHasher<User> Hasher = new PasswordHasher<User>();
+                User user = new User();
+
+                user.password = Hasher.HashPassword(user, model.password);   
+
+                Console.WriteLine("=========== hashed password =======================================");
+                Console.WriteLine("==");
+                Console.WriteLine(user.password);
+                Console.WriteLine("==");
+                Console.WriteLine("===================================================================");
+
+                user.username = model.username;
+                user.first_name = model.first_name;
+                user.last_name = model.last_name;
+                user.created_at = DateTime.Now;
+
+                int Initial_funding = 1000;
+                user.available_funds = Initial_funding;
+
+                _context.users.Add(user);
+                _context.SaveChanges();
+
+                int UserId = _context.users.Last().id;
+
+                HttpContext.Session.SetInt32("UserId", UserId);
+
+                return RedirectToAction("~/GetAuctions");
+            }
+            return View("Register", model);
+        }
+
+        [HttpPost]
+        [Route("AttemptLogin")]
+        public IActionResult AttemptLogin(LoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                User user = _context.users.Where(u => u.username == model.log_username).SingleOrDefault();
+
+                if (user != null && model.log_password != null)
+                {
+                    var Hasher = new PasswordHasher<User>();
+                    if(0 != Hasher.VerifyHashedPassword(user, user.password, model.log_password))
+                    {
+                        HttpContext.Session.SetInt32("UserId", user.id);
+                 //       return RedirectToAction ("GetAuctions");  
+                 //       return Redirect($"/GetAuctions/{user.id}");
+                        return Redirect("~/GetAuctions");
+
+                    }
+                    else
+                    {
+                        TempData["Error"] = "Invalid Login - Username / Password Combination";
+                    }
+                }    
+                else
+                {
+                    TempData["Error"] = "Please enter Login / Password";
+                }
+            }
+            return View("Login");
+        }
+
+        [HttpGet]
+        [Route("Logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("");
+        }
+
+//====================  Auctions list page  =====================
+        [HttpGet]
+        [Route("GetAuctions")]
+   //     [Route("GetAuctions/{user_id)}")]
+
+        public IActionResult GetAuctions()
+        {
+            if(Logged_user == null)
+                return RedirectToAction("");
+
+            ListAuctionsViewModel viewModel = new ListAuctionsViewModel()
+            {
+                CurrentAuctions = _context.auctions.OrderByDescending(a => a.ending_at).ToList(),
+                Current_user = Logged_user
+            };
+
+            Console.WriteLine("====================list auctions===============================================");
+            Console.WriteLine("==");
+            Console.WriteLine(Logged_user.username);
+            Console.WriteLine("==");
+            Console.WriteLine("====================list auctions===============================================");
+
+            return View("ListAuctions", viewModel);
+        }
+
+
+        [HttpPost]
+        [Route("DeleteAuction/{auction_id}")]
+        public IActionResult DeleteAuction(int auction_id)
+        {
+            Auction GetAuction = _context.auctions.Where(a => a.id == auction_id).SingleOrDefault();
+
+            _context.auctions.Remove(GetAuction);
+            _context.SaveChanges();
+
+            return RedirectToAction("GetAuctions");
+        }
+
+//====================  New Auctions  =====================
+        [HttpGet]
+        [Route("NewAuction")]
+        public IActionResult NewAuction(NewAuctionViewModel Viewmodel)
+        {
+            Console.WriteLine("====================new auction===============================================");
+
+            if(Logged_user == null)
+                return RedirectToAction("Index");
+            
+            return RedirectToAction("NewAuction", Viewmodel);
+        }
+
+
+        [HttpPost]
+        [Route("CreateAuction")]
+        public IActionResult CreateAuction(NewAuctionViewModel model)
+        {
+            Console.WriteLine("==================create auction===============================================");
+
+            if(Logged_user == null)
+                return RedirectToAction("Index");
+
+            Auction newAuction = new Auction();
+
+            Bid newBid = new Bid();
+
+            newAuction.creator_id = model.New_auction.creator_id;
+            newAuction.product = model.New_auction.product;
+            newAuction.description = model.New_auction.description;
+            newAuction.opening_bid = model.New_auction.opening_bid;
+            newAuction.ending_at = model.New_auction.ending_at;
+            newAuction.created_at = DateTime.Now;
+
+            _context.auctions.Add(newAuction);
+            _context.SaveChanges();
+
+            return RedirectToAction("GetAuctions");
+        }
+
+//==================== Auction Item Detail page =====================
+        [HttpPost]
+        [Route("AuctionItem/{auction_id}")]
+        public IActionResult AuctionItem(int auction_id)
+        {
+            if(Logged_user == null)
+                 return RedirectToAction("");
+
+            List <Bid> allBids = _context.bids.Where(b => b.auction_id == auction_id).OrderByDescending(b => b.amount).ToList();
+            Bid highBid = allBids.First();
+
+            AuctionItemViewModel Viewmodel = new AuctionItemViewModel()
+            {
+                Current_auction = _context.auctions.Where(a => a.id == auction_id).SingleOrDefault(),
+                Current_bid = highBid,
+                Current_user = Logged_user
+            };
+
+            Console.WriteLine("=================== auction item detail ===============================================");
+
+            return View("AuctionItem", Viewmodel);
+        }
+
+
+        [HttpPost]
+        [Route("BidItem")]
+        public IActionResult CreateAuctionItem(AuctionItemViewModel Viewmodel)
+        {
+            Console.WriteLine("====================bid on auction===============================================");
+
+            List<Bid> curBids = _context.bids.Where(b => b.auction_id == Viewmodel.Current_bid.auction_id).OrderByDescending(b => b.amount).ToList();
+
+            Bid highBid = curBids.First();
+
+            if(highBid.amount < Viewmodel.Current_bid.amount)
+            {
+                Bid newBid = new Bid();
+
+                newBid.user_id = Viewmodel.Current_bid.user_id;
+                newBid.auction_id = Viewmodel.Current_bid.auction_id;
+                newBid.amount = Viewmodel.Current_bid.amount;
+                newBid.created_at = DateTime.Now;
+
+                _context.bids.Add(newBid);
+                _context.SaveChanges();
+            }
+
+                return Redirect($"/AuctionItem/{Viewmodel.Current_bid.auction_id}");
+        }
+    }
+}

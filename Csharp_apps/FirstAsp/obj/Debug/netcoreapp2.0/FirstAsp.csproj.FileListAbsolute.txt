@@ -1,0 +1,10 @@
+C:\Users\Preferred User\csharp_dojo\FirstAsp\bin\Debug\netcoreapp2.0\FirstAsp.deps.json
+C:\Users\Preferred User\csharp_dojo\FirstAsp\bin\Debug\netcoreapp2.0\FirstAsp.runtimeconfig.json
+C:\Users\Preferred User\csharp_dojo\FirstAsp\bin\Debug\netcoreapp2.0\FirstAsp.runtimeconfig.dev.json
+C:\Users\Preferred User\csharp_dojo\FirstAsp\bin\Debug\netcoreapp2.0\FirstAsp.dll
+C:\Users\Preferred User\csharp_dojo\FirstAsp\bin\Debug\netcoreapp2.0\FirstAsp.pdb
+C:\Users\Preferred User\csharp_dojo\FirstAsp\obj\Debug\netcoreapp2.0\FirstAsp.csproj.CoreCompileInputs.cache
+C:\Users\Preferred User\csharp_dojo\FirstAsp\obj\Debug\netcoreapp2.0\FirstAsp.AssemblyInfoInputs.cache
+C:\Users\Preferred User\csharp_dojo\FirstAsp\obj\Debug\netcoreapp2.0\FirstAsp.AssemblyInfo.cs
+C:\Users\Preferred User\csharp_dojo\FirstAsp\obj\Debug\netcoreapp2.0\FirstAsp.dll
+C:\Users\Preferred User\csharp_dojo\FirstAsp\obj\Debug\netcoreapp2.0\FirstAsp.pdb

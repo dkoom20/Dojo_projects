@@ -1,0 +1,8 @@
+<h2>Here are the awesome quotes!</h2>
+@{
+    foreach(var quote in ViewBag.Quotes){
+        <p>"@quote["text"]"</p>
+        <p>-@quote["source"] at @quote["added_date"]</p>
+        <hr>
+    }
+}

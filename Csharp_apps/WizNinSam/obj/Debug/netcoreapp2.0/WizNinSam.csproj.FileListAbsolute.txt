@@ -1,0 +1,10 @@
+C:\Users\Preferred User\csharp_dojo\WizNinSam\bin\Debug\netcoreapp2.0\WizNinSam.deps.json
+C:\Users\Preferred User\csharp_dojo\WizNinSam\bin\Debug\netcoreapp2.0\WizNinSam.runtimeconfig.json
+C:\Users\Preferred User\csharp_dojo\WizNinSam\bin\Debug\netcoreapp2.0\WizNinSam.runtimeconfig.dev.json
+C:\Users\Preferred User\csharp_dojo\WizNinSam\bin\Debug\netcoreapp2.0\WizNinSam.dll
+C:\Users\Preferred User\csharp_dojo\WizNinSam\bin\Debug\netcoreapp2.0\WizNinSam.pdb
+C:\Users\Preferred User\csharp_dojo\WizNinSam\obj\Debug\netcoreapp2.0\WizNinSam.csproj.CoreCompileInputs.cache
+C:\Users\Preferred User\csharp_dojo\WizNinSam\obj\Debug\netcoreapp2.0\WizNinSam.AssemblyInfoInputs.cache
+C:\Users\Preferred User\csharp_dojo\WizNinSam\obj\Debug\netcoreapp2.0\WizNinSam.AssemblyInfo.cs
+C:\Users\Preferred User\csharp_dojo\WizNinSam\obj\Debug\netcoreapp2.0\WizNinSam.dll
+C:\Users\Preferred User\csharp_dojo\WizNinSam\obj\Debug\netcoreapp2.0\WizNinSam.pdb

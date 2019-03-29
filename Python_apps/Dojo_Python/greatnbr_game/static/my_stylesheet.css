@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper{
+    width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    color: #bb3131;
+    background-color: rgb(78, 95, 95);
+}
+h1, h3{
+    text-align: center;
+}
+h2{
+    margin: 0px auto;
+    padding: 10px;
+    text-align: center;
+}
+.correct{
+    margin: 10px auto;
+    border: 4px;
+    color: #2c925f;
+}
+.wrong{
+    margin: 10px auto;
+    color: #ff8080;
+}
+form{
+    text-align: center;
+    padding: 10px;
+}
+input{
+    padding: 5px;
+}
+input{
+    margin-left: 5px;
+    padding: 5px;
+    color: #004080;
+}

@@ -1,0 +1,177 @@
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using BrightIdeas.Models;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+
+namespace BrightIdeas.Controllers
+{
+    public class IdeasController : Controller
+    {
+        private BrightIdeasContext _context;
+
+        public IdeasController(BrightIdeasContext context)
+        {
+            _context = context;
+        }
+
+         public User Logged_user
+        {
+            get {return _context.user.SingleOrDefault(u => u.id == (int)HttpContext.Session.GetInt32("UserId"));}
+        }
+
+
+        [HttpGet]
+        [Route("IdeasDashboard")]
+        public IActionResult IdeasDashboard()
+        {
+            if(Logged_user == null)
+            {
+                int? CurrUser = HttpContext.Session.GetInt32("UserId");
+                
+                ModelState.AddModelError("User", "User not logged in");
+                return RedirectToAction("Login", "User");
+            }
+
+            List <Idea> allIdeas = _context.idea
+                .Include(idea => idea.IdeaGuy)
+                .ToList();
+
+            //*********************************************************************
+            //  display Idea Dashboard page
+            //*********************************************************************
+            IdeasDashboardViewModel viewModel = new IdeasDashboardViewModel()
+            {
+                CurrentIdeas = allIdeas,
+                Current_user = Logged_user
+            };
+
+            return View("IdeasDashboard", viewModel);
+        }
+
+
+        [HttpPost]
+        [Route("NewIdea")]
+        public IActionResult NewIdea(IdeasDashboardViewModel ViewModel)
+        {
+            if(Logged_user == null)
+                return RedirectToAction("Index");
+
+            Idea newIdea = new Idea();
+
+            newIdea.userid = Logged_user.id;
+            newIdea.text = ViewModel.text;
+            newIdea.created_at = DateTime.Now;
+            _context.idea.Add(newIdea);
+            _context.SaveChanges();
+
+            return RedirectToAction("IdeasDashboard");
+        }
+
+//============================================================
+//==================== User Profile page =====================
+//============================================================
+
+        [HttpGet]
+        [Route("UserProfile/{UserId}")]
+        public IActionResult UserProfile(int UserId)
+        {
+            UserProfileViewModel viewModel = new UserProfileViewModel()
+            {
+                Profiled_user = _context.user.SingleOrDefault(u => u.id == UserId),
+                Current_user = Logged_user,
+                UserPosts = _context.idea.Count(i => i.userid == UserId),
+                UserLikes = _context.likenit.Count(l => l.userid == UserId),
+            };
+
+            return View("UserProfile", viewModel);
+        }
+
+//============================================================
+//==================== Like Status Page  =====================
+//============================================================
+
+        [HttpGet]
+        [Route("LikeStatus/{IdeaId}")]
+        public IActionResult LikeStatus(int IdeaId)
+        {
+            List <Likenit> thelikers = _context.likenit.Where(l => l.ideaid == IdeaId)
+                .Include(likenit => likenit.Liker)
+                .ToList();
+
+            Idea theIdea = _context.idea.SingleOrDefault(i => i.id == IdeaId);
+            User theIdeaGuy = _context.user.SingleOrDefault(u => u.id == theIdea.userid);
+
+            LikeStatusViewModel viewModel = new LikeStatusViewModel()
+            {
+                allLikers = thelikers,
+                Selected_idea = theIdea,
+                Selected_user = theIdeaGuy        
+            };
+
+            return View("LikeStatus", viewModel);
+        }
+
+        [HttpGet]
+        [Route("AddLike/{IdeaId}")]
+        public IActionResult AddLike(int IdeaId)
+        {
+            if(Logged_user == null)
+                return RedirectToAction("Index");
+
+            int likecount = _context.likenit.Count(l => l.ideaid == IdeaId && l.userid == Logged_user.id);
+            int likeoneself = _context.idea.Count(l => l.id == IdeaId && l.userid == Logged_user.id);
+
+            if (likeoneself > 0)
+                TempData["Error"] = "That's a No-No, you cannot like yourself this much";
+            else
+                if (likecount > 0)
+                    TempData["Error"] = "That's a No-No, you've already liked this Bright Idea";
+
+            if (likecount > 0 || likeoneself > 0)
+            {
+                List <Idea> allIdeas = _context.idea
+                    .Include(idea => idea.IdeaGuy)
+                    .ToList();
+
+                IdeasDashboardViewModel viewModel = new IdeasDashboardViewModel()
+                {
+                    CurrentIdeas = allIdeas,
+                    Current_user = Logged_user
+                };
+                return View("IdeasDashboard", viewModel);
+            }
+
+
+            Likenit newLike = new Likenit();
+
+            newLike.userid = Logged_user.id;
+            newLike.ideaid = IdeaId;
+            newLike.created_at = DateTime.Now;
+            _context.likenit.Add(newLike);
+            _context.SaveChanges();
+
+            return RedirectToAction("IdeasDashboard");
+        }
+
+
+        [HttpGet]
+        [Route("DeleteIdea/{IdeaId}")]
+
+        public IActionResult DeleteIdea(int IdeaId)
+        {
+            if(Logged_user == null)
+                 return RedirectToAction("");
+
+            Idea currIdea = _context.idea.Where(a => a.id == IdeaId).SingleOrDefault();
+
+            _context.idea.Remove(currIdea);
+            _context.SaveChanges();
+
+            return RedirectToAction("IdeasDashboard");
+        }
+    }
+}

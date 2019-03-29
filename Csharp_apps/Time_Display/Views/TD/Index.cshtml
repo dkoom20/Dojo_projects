@@ -1,0 +1,22 @@
+@{
+    DateTime todayDate = DateTime.Now;
+    string dspDate = String.Format("{0:MMM d, yyyy}", todayDate);
+    string dspTime = String.Format("{0:hh:mm tt}", todayDate);
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The current time and date:</h1>
+    <h3>@dspDate</h3>
+    <h3>@dspTime</h3>
+</body>
+</html>

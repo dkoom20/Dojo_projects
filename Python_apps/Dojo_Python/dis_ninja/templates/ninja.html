@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>disappearing ninja</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_stylesheet.css') }}">
+<!--        <link rel="stylesheet" type="text/css" href="ninjacat.css">
+            <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+            <script src="ninjacat.js"></script>
+-->
+    </head>
+    <body>
+        <h2>Ninjas</h2>
+        <img src="{{url_for('static', filename='ninjas/leonardo.jpeg') }}" alt="leonardo"></img>
+        <img src="{{url_for('static', filename='ninjas/michelangelo.jpeg') }}" alt="Michelangelo"></img>
+        <img src="{{url_for('static', filename='ninjas/donatello.jpeg') }}" alt="Donatello"></img>
+        <img src="{{url_for('static', filename='ninjas/raphael.jpeg') }}" alt="Raphael"></img>
+
+    </body>
+</html>      

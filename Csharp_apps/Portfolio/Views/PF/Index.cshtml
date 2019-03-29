@@ -1,0 +1,47 @@
+@{
+    DateTime todayDate = DateTime.Now;
+    string dspDate = String.Format("{0:MMM d, yyyy}", todayDate);
+    string dspTime = String.Format("{0:hh:mm tt}", todayDate);
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title
+    <link rel="stylesheet" href="~/css/home_style.css"/>
+</head>
+
+<body>
+    <h1>HOME PAGE ----- <a href="/Projects">Projects|</a><a href="/Contact">Contact</a> </h1>
+    <h4>@dspDate  ------  @dspTime</h4>
+
+    <div class="wrapper">
+        <div class="left">
+
+          <h4>James Peterson</h4>  
+          <img src="~/pics/mypic.jpg" alt="James is missing">
+  
+        </div>
+
+        <div class="right">
+          <h4>About me:</h4>   
+
+          <p>I am an American citizen with fsdfs fsssd fsdsdfsl djflksd.  jfkls djfkjsdl kfj </p>
+          <p>sdljflk sjdf lksjdf lksjd fkljsdlk fjlssfsfdfsdfsdfsdf sdskdjf klsdjflksdj flsk. </p>
+          <p>sdljflksjdflk sjdf lksjdfkljsdlkfjls s dfsdfsdfssfdsd fskdjfklsd jflksdsd jflsk </p>
+          <p>Ikklk jasdfl sdjkfj sdfsdfs with fs dfsfsssd fsdsdfsld jflksdjfkl sdjfk jsdlkfj </p>
+          <p>sdljflksjdf lksjdflksj dfkljsdlk fjlssfsfd fsdfs dfsdfs dskdjf klsdjflk sdjflsk </p>
+          <p>sdljflksjd flksj dflksj dfklj sdlkfjl ssdfsd fsdfssfds dfskdjf klsdjflkd jflsk. </p>
+          <p>sdljflksjdflk sjdf lksjdfkljsdlkfjls s dfsdfsdfssfdsd fskdjfklsd jflksdsd jflsk </p>
+          <p>Ikklk jasdfl sdjkfj sdfsdfs with fs dfsfsssd fsdsdfsld jflksdjfkl sdjfk jsdlkfj </p>
+          <p>sdljflksjdf lksjdflksj dfsdfsd.
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+.wrapper {
+    width: 880px;
+    height:780px;
+    margin-top: 33 px;
+    border: 12px solid black;
+    border-radius: 3px;
+    padding: 5px;
+}
+.pcode_box {
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+.h2 {
+    text-align: center;
+}
+#txtbox {
+    height:100px;
+    width:400px;
+}

@@ -1,0 +1,29 @@
+@model ListAuctionsViewModel
+@{
+    if (TempData["Error"] != null)
+    {
+        <p>@TempData["Error"]</p>
+    }
+}
+
+<h1>Current Auctions ................................. Hello @Model.Current_user.first_name !   <a href="/Logout" class="button button-primary">Logout</a> </h1>
+<h3></h3>
+
+<h5>Product ............................ Seller ............................ Top Bid ........................ Time Remaining ............................</h5>
+@foreach (var A in Model.CurrentAuctions)
+{
+    @foreach (var B in Model.auctionBids)
+    {
+        if(A.creator.id == Model.Current_user.id)
+        {
+            <p><a href="/GetItem/@A.id" class="button button-primary"> @A.product</a> ....................... @A.creator.first_name ...................... @A.created_at  ....................... @A.RemainTime <a href="/DeleteAuction/@A.id"  class="button button-primary">  DELETE</a></p>
+        }
+        else 
+        {
+            <p><a href="/GetItem/@A.id" class="button button-primary"> @A.product</a> ....................... @A.creator.first_name ...................... @A.ending_at  ....................... @A.RemainTime </p>
+        }
+    }
+}
+
+
+<a href="/NewAuction" class="button button-primary">New Auction</a>

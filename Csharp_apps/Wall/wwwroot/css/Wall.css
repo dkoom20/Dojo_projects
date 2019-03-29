@@ -1,0 +1,22 @@
+﻿nav {
+    text-align: center;
+}
+nav > *{
+    margin: 25px;
+    display: inline-block;
+}
+.message>p, .comment>p{
+    font-weight: bold;
+    font-family: monospace;
+}
+.message{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.comment{
+    margin: 30px 10px 10px 10px;
+    padding: 10px;
+    border: 1px solid black;
+}

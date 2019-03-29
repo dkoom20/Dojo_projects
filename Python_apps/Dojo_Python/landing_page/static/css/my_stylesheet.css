@@ -1,0 +1,27 @@
+/*CSS reset settings here*/
+*{
+     margin: 0px;
+     padding: 0px;
+     }
+    a{
+     color: light-gray;
+     font-size: 10;
+     }
+    p{
+     color: white;
+     font-size: 10;
+     }
+    .wrapper{
+     height: 660px;
+     width: 1000px;
+     background-color: darkgray;
+     }
+    h2{
+     color: red;
+     }  
+    h3{
+     color: blue;
+     }
+    h4{
+     color: yellow;
+     }

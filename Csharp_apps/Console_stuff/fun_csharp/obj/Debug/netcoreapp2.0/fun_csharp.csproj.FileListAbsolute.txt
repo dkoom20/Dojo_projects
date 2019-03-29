@@ -1,0 +1,10 @@
+C:\Users\Preferred User\csharp_dojo\fun_csharp\bin\Debug\netcoreapp2.0\fun_csharp.deps.json
+C:\Users\Preferred User\csharp_dojo\fun_csharp\bin\Debug\netcoreapp2.0\fun_csharp.runtimeconfig.json
+C:\Users\Preferred User\csharp_dojo\fun_csharp\bin\Debug\netcoreapp2.0\fun_csharp.runtimeconfig.dev.json
+C:\Users\Preferred User\csharp_dojo\fun_csharp\bin\Debug\netcoreapp2.0\fun_csharp.dll
+C:\Users\Preferred User\csharp_dojo\fun_csharp\bin\Debug\netcoreapp2.0\fun_csharp.pdb
+C:\Users\Preferred User\csharp_dojo\fun_csharp\obj\Debug\netcoreapp2.0\fun_csharp.csproj.CoreCompileInputs.cache
+C:\Users\Preferred User\csharp_dojo\fun_csharp\obj\Debug\netcoreapp2.0\fun_csharp.AssemblyInfoInputs.cache
+C:\Users\Preferred User\csharp_dojo\fun_csharp\obj\Debug\netcoreapp2.0\fun_csharp.AssemblyInfo.cs
+C:\Users\Preferred User\csharp_dojo\fun_csharp\obj\Debug\netcoreapp2.0\fun_csharp.dll
+C:\Users\Preferred User\csharp_dojo\fun_csharp\obj\Debug\netcoreapp2.0\fun_csharp.pdb

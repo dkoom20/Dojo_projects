@@ -1,0 +1,54 @@
+.wrapper {
+    width: 880px;
+    height:980px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 5px;
+}
+.scroll {
+    display: inline-block;
+    vertical-align: top;
+    border-style:solid;
+    overflow-y:scroll;
+    border: 3px;
+    margin-left: 10px;
+    height: 720;
+    width: 450px;
+}
+.right {
+    display: inline-block;
+    vertical-align: top;
+    overflow-y:scroll;
+    color: red;
+    margin-left: 30px;
+    height: 600;
+    width: 400px;    
+}
+.left {
+    display: inline-block;
+    height: 600;
+    width: 400px; 
+}
+#logout {
+    position: absolute;
+    left: 930px;
+    top: 10px;
+    margin: 5px;
+}
+#dash {
+    position: absolute;
+    left: 820px;
+    top: 10px;
+    margin: 5px;
+}
+#txtbox {
+    height:100px;
+    width:400px;
+}   
+h3 {
+    padding: 5px;
+}
+h4 {
+    padding: 5px;
+}

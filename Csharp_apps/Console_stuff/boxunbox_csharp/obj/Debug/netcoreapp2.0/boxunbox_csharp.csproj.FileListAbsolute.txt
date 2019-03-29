@@ -1,0 +1,10 @@
+C:\Users\Preferred User\csharp_dojo\boxunbox_csharp\obj\Debug\netcoreapp2.0\boxunbox_csharp.csproj.CoreCompileInputs.cache
+C:\Users\Preferred User\csharp_dojo\boxunbox_csharp\obj\Debug\netcoreapp2.0\boxunbox_csharp.AssemblyInfoInputs.cache
+C:\Users\Preferred User\csharp_dojo\boxunbox_csharp\obj\Debug\netcoreapp2.0\boxunbox_csharp.AssemblyInfo.cs
+C:\Users\Preferred User\csharp_dojo\boxunbox_csharp\bin\Debug\netcoreapp2.0\boxunbox_csharp.deps.json
+C:\Users\Preferred User\csharp_dojo\boxunbox_csharp\bin\Debug\netcoreapp2.0\boxunbox_csharp.runtimeconfig.json
+C:\Users\Preferred User\csharp_dojo\boxunbox_csharp\bin\Debug\netcoreapp2.0\boxunbox_csharp.runtimeconfig.dev.json
+C:\Users\Preferred User\csharp_dojo\boxunbox_csharp\bin\Debug\netcoreapp2.0\boxunbox_csharp.dll
+C:\Users\Preferred User\csharp_dojo\boxunbox_csharp\bin\Debug\netcoreapp2.0\boxunbox_csharp.pdb
+C:\Users\Preferred User\csharp_dojo\boxunbox_csharp\obj\Debug\netcoreapp2.0\boxunbox_csharp.dll
+C:\Users\Preferred User\csharp_dojo\boxunbox_csharp\obj\Debug\netcoreapp2.0\boxunbox_csharp.pdb

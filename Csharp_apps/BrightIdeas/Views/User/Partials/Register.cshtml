@@ -1,0 +1,36 @@
+@model BrightIdeas.Models.RegisterUser
+
+<h1>Register</h1>
+<form asp-action="Register" asp-controller="User" method="post">
+    <div class="form-group">
+        <span asp-validation-for="name"></span>
+        <label asp-for="name"></label>
+        <input class="form-control" asp-for="name">
+    </div>
+
+    <div class="form-group">
+        <span asp-validation-for="alias"></span>
+        <label asp-for="alias"></label>
+        <input class="form-control" asp-for="alias">
+    </div>
+
+    <div class="form-group">
+        <span asp-validation-for="email"></span>
+        <label asp-for="email">email address</label>
+        <input class="form-control" asp-for="email">
+    </div>
+
+    <div class="form-group">
+        <span asp-validation-for="password"></span>
+        <label asp-for="password"></label>
+        <input class="form-control" asp-for="password">
+    </div>
+
+    <div class="form-group">
+        <span asp-validation-for="pw_confirm"></span>
+        <label asp-for="pw_confirm">confirm password</label>
+        <input class="form-control" asp-for="pw_confirm">
+    </div>
+
+    <input type="submit" value="Submit">
+</form>
