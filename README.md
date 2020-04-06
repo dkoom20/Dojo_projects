@@ -3,4 +3,4 @@ as a backend developer in web based applications.  Many contain full-stack codin
 
 The main framework employed within Python apps was Django.   Several other apps were also built using the more compact Flask framework.
 
-For the C# apps, the .NET framework was the heavy focus to explore and understand the many powerful features that it offers.
+For the C# apps, the ASP.NET framework was the heavy focus to explore and understand the many powerful features it offers.
