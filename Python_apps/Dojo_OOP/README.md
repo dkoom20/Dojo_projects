@@ -1,2 +1,2 @@
 
-Object Oriented programming assignments for Coding Dojo
+Object Oriented programming assignments for Coding Dojo.
